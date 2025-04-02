@@ -12,16 +12,16 @@ const ConversorMoedas = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-orange-50">
-      <div className="p-8 rounded-xl w-[900px] max-w-md ">
-        <h1 className="text-2xl font-bold text-blue-800 text-center">CONVERSOR DE MOEDAS</h1>
-        <p className="text-gray-400 font-medium text-center mt-4">Converta de Real para Dólar</p>
+      <div className="p-8 rounded-xl w-[900px] ">
+        <h1 className="text-2xl lg:text-4xl font-bold text-blue-800 text-center">CONVERSOR DE MOEDAS</h1>
+        <p className="text-gray-400 font-medium lg:text-2xl text-center mt-4">Converta de Real para Dólar</p>
         
         <div className="mt-10 bg-white rounded-2xl p-6">
-          <h1 className="text-gray-600">Quantia</h1>
+          <h1 className="text-gray-600 lg:font-bold lg:text-2xl">Quantia</h1>
           <div className="flex items-center justify-between mt-4">
             <div className="flex items-center space-x-2">
               <Image src="/BR.png" alt="Real" width={40} height={40} className="rounded-full" />
-              <span className="font-semibold text-blue-800">BRL</span>
+              <span className="font-semibold text-blue-800 lg:text-2xl">BRL</span>
             </div>
             <input
               type="number"
@@ -32,7 +32,7 @@ const ConversorMoedas = () => {
           </div>
 
           <div className="flex justify-between items-center mt-6">
-            <label className="text-gray-600">Câmbio Dólar</label>
+            <label className="text-gray-600 lg:text-2xl lg:font-semibold">Câmbio Dólar</label>
             <input
           type="number"
           value={cambio === 0 ? "" : cambio}
@@ -49,11 +49,11 @@ const ConversorMoedas = () => {
             </div>
           </div>
           
-          <h1 className="text-gray-600 mt-8">Quantia Convertida</h1>
+          <h1 className="text-gray-600 mt-8 lg:font-bold lg:text-2xl">Quantia Convertida</h1>
           <div className="flex items-center justify-between mt-4">
             <div className="flex items-center space-x-2">
               <Image src="/eua.png" alt="Dólar" width={40} height={40} className="rounded-full" />
-              <span className="font-semibold text-blue-600">USD</span>
+              <span className="font-semibold text-blue-800 lg:text-2xl">USD</span>
             </div>
             <input
               type="text"
@@ -65,8 +65,8 @@ const ConversorMoedas = () => {
         </div>
 
         <div>
-          <h1 className="text-center font-semibold mt-8">Conversão Realizada</h1>
-          <p className="text-gray-700 mt-6 text-center font-bold">
+          <h1 className="text-center font-semibold mt-8 lg:text-2xl">Conversão Realizada</h1>
+          <p className="text-gray-700 mt-6 text-center font-bold lg:text-2xl">
             R$ {quantia.toFixed(2)} = $ {quantiaConvertida}
           </p>
         </div>
