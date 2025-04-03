@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ArrowDownUp } from "lucide-react";
+import { ArrowDownUp, ChevronDownIcon } from "lucide-react";
 import Image from "next/image";
 
 const ConversorMoedas = () => {
@@ -29,14 +29,18 @@ const ConversorMoedas = () => {
                 height={40}
                 className="rounded-full"
               />
+              <div className="cursor-pointer hover:bg-gray-200 hover:border-2 flex items-center">
               <select
-                value={moeda}
-                onChange={(e) => setMoeda(e.target.value)}
-                className=" p-2 rounded text-blue-600 font-bold text-2xl"
-              >
-                <option value="brl">BRL</option>
-                <option value="usd">USD</option>
+              value={moeda}
+              onChange={(e) => setMoeda(e.target.value)}
+              className="p-2 rounded text-blue-600 font-bold text-2xl decoration-0 appearance-none bg-transparent focus:outline-none focus:ring-0">
+              <option value="brl">BRL</option>
+              <option value="usd">USD</option>
               </select>
+              <ChevronDownIcon className="text-blue-600 " size={28} />
+              </div>
+
+             
             </div>
             <input
             type="number"
